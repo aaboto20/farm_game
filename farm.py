@@ -25,6 +25,7 @@ def describe_location():
             print('Unrecognized command')
 
 def perform_action():
+    #farming sim 
     if player.current_location == "Garden":
         print("What do you want to do in the Garden?")
         while True:
@@ -39,7 +40,35 @@ def perform_action():
                 break
             else:
                 print("Invalid action. Try again.")
-
-
+    #cooking sim
+    elif player.current_location == "Cottage":
+        print("What would you like to do in the Cottage?")
+        while True:
+            action = input("Options:  sleep, cook, weather, or back: ")
+            if action == "sleep":
+                print("You call it a night and go to bed.")
+            elif action == "cook":
+                print("You cook up some food.")
+            elif action == "weather":
+                print("You check the weather for the day.")
+            elif action == "back":
+                break
+            else:
+                print("Invalid action.  Try again.")
+    #cloning sim
+    elif player.current_location == "Transcriber":
+        print("What would you like to work on?")
+        while True:
+            action = input("Transcribe: Machine, Plant, or Animal schematics?")
+            if action == "machine":
+                print("You build a new machine.")
+            elif action == "plant":
+                print("You clone a plant from Earth.")
+            elif action == "animal":
+                print("You clone an animal from Earth.")
+            elif action == "back":
+                break
+            else:
+                print("Invalid action.  Try again.")
 # Start the game
 describe_location()
