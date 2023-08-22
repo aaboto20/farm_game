@@ -10,6 +10,8 @@ def move_to(location):
     elif location == '3':
         player.current_location = "Transcriber"
 
+
+        
 player = Player()
 
 def describe_location():
@@ -23,10 +25,18 @@ def describe_location():
             perform_action()
         else:
             print('Unrecognized command')
+            
+garden_grid = [['empty' for _ in range(3)] for _ in range(3)]
+
+def display_garden(grid):
+    for row in grid:
+        print(" | ".join(row))
+    print("---------")
 
 def perform_action():
-    #farming sim 
+    # farming sim
     if player.current_location == "Garden":
+        display_garden(garden_grid)  # Pass the garden_grid to the display_garden function
         print("What do you want to do in the Garden?")
         while True:
             action = input("Options: plant, harvest, storage, or back: ")
