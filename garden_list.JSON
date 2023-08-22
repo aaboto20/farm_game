@@ -1,0 +1,22 @@
+{
+    "plants": [
+        {
+            "name": "Tomato",
+            "type": "vegetable",
+            "watered": true,
+            "quantity": 4
+        },
+        {
+            "name": "Carrot",
+            "type": "vegetable",
+            "watered": true,
+            "quantity": 9
+        },
+        {
+            "name": "Apple",
+            "type": "fruit",
+            "watered": true,
+            "quantity": 2
+        }
+    ]
+}
